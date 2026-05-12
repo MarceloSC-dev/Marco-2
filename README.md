@@ -7,8 +7,8 @@ Este repositório contém o desenvolvimento de um coprocessador para a disciplin
 ## 📌 Sumário
 1. [Introdução e Definição do Problema](#1-introdução-e-definição-do-problema)
 2. [Requisitos Principais](#2-requisitos-principais)
-3. [Arquitetura do Coprocessador](#3-arquitetura-do-coprocessador)
-4. [Status do Desenvolvimento](#4-status-do-desenvolvimento)
+3. [Fundamentação Teórica](#3-fundamentação-teorica)
+4. [Descrição da Solução](#4-descrição-da-solução)
 
 ---
 
@@ -31,7 +31,9 @@ Os requisitos fundamentais estabelecidos para esta fase do projeto incluem:
 * Enviar corretamente os dados para o hardware seguindo a ISA definida.
 * Executar a instrução START para iniciar a inferência.
 * Receber e interpretar o dígito predito retornado pelo co-processador.
-## 3. Arquitetura do Coprocessador (Marco 2)
 
 
-**Desenvolvido como parte da graduação em Engenharia de Computação.**
+## 3. Fundamentação Teórica (Marco 2)
+
+## 4. Descrição da Solução
+
