@@ -5,11 +5,10 @@
 Este repositório contém o desenvolvimento de um coprocessador para a disciplina de Sistemas Digitais. Atualmente, o projeto encontra-se na finalização do **Marco 2**, focado na integração dos módulos fundamentais e estruturação do Datapath.
 
 ## 📌 Sumário
-1. [Introdução](#1-introdução)
-2. [Definição do Problema](#2-definição-do-problema)
-3. [Requisitos Principais](#3-requisitos-principais)
-4. [Arquitetura do Coprocessador](#4-arquitetura-do-coprocessador)
-5. [Status do Desenvolvimento](#5-status-do-desenvolvimento)
+1. [Introdução e Definição do Problema](#1-introdução-e-definição-do-problema)
+2. [Requisitos Principais](#3-requisitos-principais)
+3. [Arquitetura do Coprocessador](#4-arquitetura-do-coprocessador)
+4. [Status do Desenvolvimento](#5-status-do-desenvolvimento)
 
 ---
 
