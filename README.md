@@ -1,7 +1,5 @@
 # Marco-2
-
 # Projeto Coprocessador - Sistemas Digitais (PBL)
-
 Este repositório contém o desenvolvimento de um coprocessador para a disciplina de Sistemas Digitais. Atualmente, o projeto encontra-se na finalização do **Marco 2**, focado na integração dos módulos fundamentais e estruturação do Datapath.
 
 ## 📌 Sumário
@@ -19,8 +17,13 @@ Este repositório contém o desenvolvimento de um coprocessador para a disciplin
    - [4.3 ISA — Conjunto de Instruções](#43-isa--conjunto-de-instruções)
 5. [Descrição da Solução](#5-descrição-da-solução)
    - [5.1 Arquitetura Geral](#51-arquitetura-geral)
-   - [5.2 Funções Expostas](#52-funções-expostas)
-   - [5.3 Fluxo de Execução](#53-fluxo-de-execução)
+   - [5.2 Escolha do /dev/mem](#52-escolha-do-devmem)
+   - [5.3 Mapa de Endereços dos PIOs](#53-mapa-de-endereços-dos-pios)
+   - [5.4 Formato das Instruções](#54-formato-das-instruções)
+   - [5.5 Funções Expostas](#55-funções-expostas)
+   - [5.6 Fluxo de Execução](#56-fluxo-de-execução)
+   - [5.7 Montagem da Instrução de 32 bits](#57-montagem-da-instrução-de-32-bits)
+   - [5.8 Protocolo Enable e Polling](#58-protocolo-enable-e-polling)
 6. [Modo de Uso](#6-modo-de-uso)
 7. [Testes e Resultados](#7-testes-e-resultados)
 8. [Erros e Limitações](#8-erros-e-limitações)
@@ -30,27 +33,65 @@ Este repositório contém o desenvolvimento de um coprocessador para a disciplin
 ---
 
 ## 1. Introdução e Definição do Problema
-O principal objetivo deste trabalho é desenvolver um driver em Assembly ARM capaz de fazer a comunicação entre o sistema Linux executando no HPS e o co-processador ELM implementado na FPGA. Essa comunicação será realizada utilizando MMIO (Memory-Mapped I/O), onde o processador acessa registradores do hardware através de endereços de memória específicos.
 
-Para isso, é necessário configurar corretamente a integração entre HPS e FPGA utilizando as bridges disponibilizadas pela plataforma SoC FPGA, além de controlar os PIOs responsáveis pelo envio e recebimento de dados do co-processador.
-  
 ## 2. Requisitos Principais
-Os requisitos fundamentais estabelecidos para esta fase do projeto incluem:
-* Integrar o HPS com a FPGA utilizando as bridges HPS↔FPGA.
-* Permitir comunicação entre Linux e o co-processador através de MMIO.
-* Desenvolver um driver em Assembly ARM para controle do hardware.
-* Implementar envio de instruções de 32 bits para o co-processador.
-* Controlar os sinais Enable, Clear e Reset através do barramento Signals.
-* Ler o estado do co-processador utilizando o barramento Data Out.
-* Implementar polling para verificar as flags DONE, BUSY e ERROR.
-* Ler arquivos binários (.bin) contendo imagem, bias e beta.
-* Armazenar os dados em buffers na memória RAM.
-* Enviar corretamente os dados para o hardware seguindo a ISA definida.
-* Executar a instrução START para iniciar a inferência.
-* Receber e interpretar o dígito predito retornado pelo co-processador.
 
+## 3. Fundamentação Teórica
 
-## 3. Fundamentação Teórica (Marco 2)
+### 3.1 DE1-SoC e a Lightweight HPS-to-FPGA Bridge
 
-## 4. Descrição da Solução
+### 3.2 MMIO (Memory-Mapped I/O)
 
+### 3.3 /dev/mem e Syscalls
+
+### 3.4 Polling
+
+---
+
+## 4. Co-processador ELM
+
+### 4.1 Descrição
+
+### 4.2 Barramentos
+
+### 4.3 ISA — Conjunto de Instruções
+
+---
+
+## 5. Descrição da Solução
+
+### 5.1 Arquitetura Geral
+
+### 5.2 Escolha do /dev/mem
+
+### 5.3 Mapa de Endereços dos PIOs
+
+### 5.4 Formato das Instruções
+
+### 5.5 Funções Expostas
+
+### 5.6 Fluxo de Execução
+
+### 5.7 Montagem da Instrução de 32 bits
+
+### 5.8 Protocolo Enable e Polling
+
+---
+
+## 6. Modo de Uso
+
+---
+
+## 7. Testes e Resultados
+
+---
+
+## 8. Erros e Limitações
+
+---
+
+## 9. Próximos Passos — Marco 3
+
+---
+
+## 10. Referências
