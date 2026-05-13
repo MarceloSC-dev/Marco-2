@@ -16,7 +16,6 @@ Este repositório contém o desenvolvimento de um coprocessador para a disciplin
    - [4.2 Barramentos](#42-barramentos)
    - [4.3 ISA — Conjunto de Instruções](#43-isa--conjunto-de-instruções)
 5. [Descrição da Solução](#5-descrição-da-solução)
-   - 
 6. [Modo de Uso](#6-modo-de-uso)
 7. [Testes e Resultados](#7-testes-e-resultados)
 8. [Erros e Limitações](#8-erros-e-limitações)
