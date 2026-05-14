@@ -75,32 +75,7 @@ A placa conta com as seguintes especificações relevantes para o projeto:
 - Lightweight Bridge com endereço base 0xFF200000
 
 ### Platform Designer
-O Platform Designer é uma ferramenta do Quartus que facilita a conexão 
-entre o HPS e a FPGA de forma visual, sem precisar fazer toda a integração 
-manualmente. Foi através dele que a comunicação entre o processador ARM e 
-o co-processador ELM foi organizada no projeto.
 
-Nele, foram adicionados o HPS e os PIOs usados para trocar informações 
-com o hardware:
-
-- um PIO de 32 bits para enviar dados (`Data In`);
-- um PIO de 3 bits para os sinais de controle (`Signals`);
-- um PIO de 32 bits para receber os resultados (`Data Out`). # botar imagens nos 3 
-
-Depois disso, tudo foi conectado utilizando a Lightweight Bridge, que é 
-a ponte responsável por permitir que o Linux consiga acessar os 
-registradores da FPGA.
-
-O Platform Designer também gera automaticamente os endereços de memória 
-usados na comunicação. Foi ele que definiu:
-
-- `Data In` → `0xFF200000`
-- `Signals` → `0xFF200010`
-- `Data Out` → `0xFF200020` #botar imangens nos 3 
-
-Esses endereços são fundamentais porque é através deles que o driver 
-consegue escrever e ler informações do co-processador. Sem isso, o Linux 
-não teria como acessar o hardware implementado na FPGA.
 
 ### MMIO (Memory-Mapped I/O)
 MMIO (Memory-Mapped I/O) é uma forma de comunicação onde os registradores 
